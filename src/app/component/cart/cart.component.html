@@ -1,0 +1,19 @@
+<p> <br></p>
+<div class="row g-5">
+  <div class ="col-md-3">
+</div>
+  <div class="col-md-2">
+    <ul class="list-group mb-3">
+        <li>
+          <app-cart-item class ="list-group-item" *ngFor=" let Item of Items"[Item]="Item" (productRemoved)="removeProduct($event)"></app-cart-item>
+        </li>
+     <li class="list-group-item"> <span>Total (USD)</span>
+     {{getTotal()}}</li>
+    </ul>
+  </div>
+
+  <div class="col-md-5">
+    <app-billingform></app-billingform>
+  </div>
+
+</div>

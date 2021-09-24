@@ -1,0 +1,32 @@
+<link href="billingform.component.css" rel="stylesheet">
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3"class="text-muted">Payment</h4>
+  <div class="row gy-3">
+    <div class="col-md-6">
+      <label for="cc-name" class="text-muted" class="form-label">Name on card</label>
+
+        <input type="text" class="form-control" id="cc-name" name="name"
+               placeholder="" ng-model="somefield"  [(ngModel)]="name"required>
+      <span class="text-muted" ng-show="!somefield">Please enter something!</span>
+        <div class="invalid-feedback" >
+        </div>
+
+      <label for="cc-number" class="text-muted" class="form-label">Credit card number</label>
+      <input type="text" class="form-control" id="cc-number" placeholder="" [(ngModel)]="cardNumber">
+      <div class="invalid-feedback">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <label for="cc-cvv" class="text-muted" class="form-label">CVV</label>
+      <input type="text" class="form-control" id="cc-cvv" [(ngModel)]="CVV" >
+      <div class="invalid-feedback">
+        Security code required
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <button class="w-100 btn btn-primary btn-lg" class="btn" (click)="textEmpty(name,cardNumber,CVV)" type="submit">Continue to checkout</button>
+</div>

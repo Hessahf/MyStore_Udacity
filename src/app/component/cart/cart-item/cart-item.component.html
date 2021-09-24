@@ -1,0 +1,14 @@
+<div class ="cart-item"*ngIf="Item">
+    <div>
+      <h6 class="my-0" class="text-muted">{{Item.product.name}}</h6>
+      <small class="text-muted">{{Item.product.description}}</small>
+    </div>
+    <span class="text-muted">{{Item.product.price}}</span>
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <input type="number" [(ngModel)]="Item.quantity" min="0"
+               (ngModelChange)="modelChanged(this.Item)"
+        />
+      </div>
+    </div>
+</div>

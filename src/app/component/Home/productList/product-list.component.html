@@ -1,0 +1,9 @@
+<!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+  <app-product-item class="col-md-4" *ngFor="let product of products"[product]="product"></app-product-item>
+
+</div>
+

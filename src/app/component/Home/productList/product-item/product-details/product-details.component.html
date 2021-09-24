@@ -1,0 +1,90 @@
+<div class='card'>
+  <div class='card-header'>
+    <button class='btn btn-outline-secondary'
+            style='width:80px'
+            (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+
+<!--  <div class='card-body'-->
+<!--       *ngIf='product'>-->
+    <div class='card-body'
+         >
+    <div class='row'>
+      <div class ="col">
+      </div>
+      <div class='col-md-2'>
+        <img class='center-block img-responsive' width="100%" src="{{product?.url}}"/>
+        <!--             [style.width.px]='200'-->
+        <!--             [style.margin.px]='2'-->
+        <!--             [src]=''-->
+        <!--             [title]= >-->
+        <!--             [src]='product.imageUrl'-->
+        <!--             [title]='product.productName'>-->
+
+      </div>
+      <div class='col-md-6'>
+        <p><br></p>
+        <div class='row'>
+          <div class='col-md-4'class="text-muted">Name:</div>
+          <div class='col-md-8'>
+
+          {{product?.name}}
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'class="text-muted">Code:</div>
+          <div class='col-md-8'>
+          {{product?.id}}
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'class="text-muted">Description:</div>
+          <div class='col-md-8'>
+{{product?.description}}
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'class="text-muted">Price:</div>
+          <div class='col-md-8'>
+            {{ product?.price|currency:'USD':'symbol'}}
+          </div>
+        </div>
+        <div class ="row">
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"(change)="selectChangeHandler($event)">
+                <option selected value="0">choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="5">6</option>
+                <option value="5">7</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary product-btn"(click)="addToCart(product,amount)">Add to cart</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <p><br></p>
+<!--    <button class='btn btn-outline-secondary'-->
+<!--            style='width:80px'-->
+<!--            (click)='onBack()'>-->
+  </div>
+</div>
